@@ -17,4 +17,4 @@ sum = Add.new(lit, lit1)
 mul = Mul.new(sum, lit2)
 div = Div.new(mul, lit3)
 subi = Sub.new(lit4, div)
-puts subi.eval
+puts subi.print
