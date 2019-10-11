@@ -1,4 +1,4 @@
-require './src/core'
+require './src/Core'
 module Eval
     module Expression
         include Core::Exp

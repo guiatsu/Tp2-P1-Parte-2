@@ -8,13 +8,10 @@ include Sub_Eval
 include Mul_Eval
 include Div_Eval
 include Eval
-lit = Literal.new(50)
-lit1 = Literal.new(40)
-lit2 = Literal.new(5)
-lit3 = Literal.new(10)
-lit4 = Literal.new(15)
-sum = Add.new(lit, lit1)
-mul = Mul.new(sum, lit2)
-div = Div.new(mul, lit3)
-subi = Sub.new(lit4, div)
-puts subi.print
+lit1 = Literal.new(10)
+lit2 = Literal.new(15)
+sum = Add.new(lit1, lit2)
+mul = Mul.new(lit1, lit2)
+div = Div.new(lit1, lit2)
+subi = Sub.new(lit1, lit2)
+puts sum.eval

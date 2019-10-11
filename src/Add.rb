@@ -1,4 +1,4 @@
-require './src/core'
+require './src/Core'
 module Core_Add
     module Exp_Add
         include Core::Exp

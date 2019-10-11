@@ -1,0 +1,6 @@
+require 'test/unit'
+require './Test/TestLit'
+require './Test/TestSum'
+require './Test/TestSub'
+require './Test/TestMul'
+require './Test/TestDiv'
