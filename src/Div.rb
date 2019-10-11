@@ -1,6 +1,6 @@
 require './src/Core'
 module Core_Div
-    module Exp_Div
+    module Exp_Div  # modulo responsavel por implementar a forma de printar expressao para divisao
         include Core::Exp
         def print()
             return "(" + @left.print + "/" + @right.print + ")" 

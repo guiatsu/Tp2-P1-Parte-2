@@ -1,6 +1,6 @@
 require './src/Core'
 module Core_Mul
-    module Exp_Mul
+    module Exp_Mul  # modulo responsavel por implementar a forma de printar expressao para multiplicacao
         include Core::Exp
         def print()
             return "(" + @left.print + "*" + @right.print + ")" 

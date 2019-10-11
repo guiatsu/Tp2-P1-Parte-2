@@ -1,6 +1,6 @@
 require './src/Core'
 module Core_Sub
-    module Exp_Sub
+    module Exp_Sub  # modulo responsavel por implementar a forma de printar expressao para subtracao
         include Core::Exp
         def print()
             return "(" + @left.print + "-" + @right.print + ")" 
