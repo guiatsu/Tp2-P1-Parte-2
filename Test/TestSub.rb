@@ -12,14 +12,11 @@ class Test_Sub < Test::Unit::TestCase
     end
     def test_subi2
         lit = Literal.new(10)
-        lit1 = Literal.new(15.2)
-        subi = Sub.new(lit, lit1)
+        subi = Sub.new(lit, 15.2)
         assert_equal "(10-15.2)", subi.print
     end
     def test_subi3
-        lit = Literal.new(3156)
-        lit1 = Literal.new(548)
-        subi = Sub.new(lit, lit1)
+        subi = Sub.new(3156, 548)
         assert_equal 2608, subi.eval
     end
     def test_subi4

@@ -13,16 +13,13 @@ class Test_Div < Test::Unit::TestCase
     end
 
     def test_div2
-        lit = Literal.new(100)
         lit1 = Literal.new(10)
-        div = Div.new(lit, lit1)
+        div = Div.new(100, lit1)
         assert_equal "(100/10)", div.print
     end
 
     def test_div3
-        lit = Literal.new(2500)
-        lit1 = Literal.new(50)
-        div = Div.new(lit, lit1)
+        div = Div.new(2500, 50)
         assert_equal 50, div.eval
     end
 
