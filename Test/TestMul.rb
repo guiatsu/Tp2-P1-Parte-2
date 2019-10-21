@@ -19,13 +19,16 @@ class Test_Mul < Test::Unit::TestCase
     end
     
     def test_mul3
+        lit = Literal.new(3156)
         lit1 = Literal.new(548)
-        mul = Mul.new(3156, lit1)
+        mul = Mul.new(lit, lit1)
         assert_equal 1729488, mul.eval
     end
     
     def test_mul4
-        mul = Mul.new(3156, 548)
+        lit = Literal.new(3156)
+        lit2 = Literal.new(548)
+        mul = Mul.new(lit, lit2)
         assert_equal "(3156*548)", mul.print
     end
     

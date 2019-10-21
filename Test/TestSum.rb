@@ -14,12 +14,14 @@ class Test_Sum < Test::Unit::TestCase
     def test_sum2
         lit = Literal.new(10)
         lit1 = Literal.new(15.2)
-        sum = Add.new(10, lit1)
+        sum = Add.new(lit, lit1)
         assert_equal "(10+15.2)", sum.print
     end
     
     def test_sum3
-        sum = Add.new(3156, 548)
+        lit = Literal.new(3156)
+        lit1 = Literal.new(548)
+        sum = Add.new(lit1, lit)
         assert_equal 3704, sum.eval
     end
     

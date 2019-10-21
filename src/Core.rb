@@ -1,20 +1,15 @@
-
 module Core
     module Exp	#modulo com metodo abstrato de printar
-        def print
+        def exp_print(signal)
+            raise NotImplementedError, 'print is not implemented on both expressions' unless (@left.class.method_defined? :print or @right.class.method_defined? :print)
+            raise NotImplementedError, 'print is not implemented on left expression' unless @left.class.method_defined? :print
+            raise NotImplementedError, 'print is not implemented on right expression' unless @right.class.method_defined? :print
+            return "(" + @left.print + signal + @right.print + ")"
 
         end
     end
-    module Is_number #modulo com metodo de verificacao se eh numero
-        def is_number(value)
-            is_number = false
-            if(value.is_a? Integer or value.is_a? Float)
-                is_number = true
-            end
-        end
-    end
+    
     class Lit	#modulo referente a Literals
-        include Exp		#importando os metodos de exp para implementah-los
         def initialize(value)
             @value = value
         end

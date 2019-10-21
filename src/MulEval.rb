@@ -8,19 +8,8 @@ module Mul_Eval
             @left = left
             @right = right
             def eval()
-                if(is_number(@left))
-                    left = @left
-                else
-                    left = @left.eval
-                end
-                if(is_number(@right))
-                    right = @right
-                else
-                    right = @right.eval
-                end
-    
-                return (left * right).to_f
-            end       
+                return exp_eval("*")
+            end   
         end    
     end
 end
